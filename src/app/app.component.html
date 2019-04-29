@@ -1,0 +1,13 @@
+<div class="container">  
+  <div class="time-auto-adjust">
+    <h1>Auto Time Adjust</h1>
+    <form [formGroup]="timeCalcuate">
+
+      <input type="number" class="hours-section" placeholder="hours" #hours  formControlName = "Hours" (change)="checkTime(hours.value , minutes.value ,seconds.value)">
+      :
+      <input type="number" class="minutes-section" placeholder="mins" #minutes   formControlName = "Minutes" (change)="checkTime(hours.value , minutes.value , seconds.value)">
+      :
+      <input type="number" class="seconds-section" placeholder="sec" #seconds   formControlName = "Seconds" (change)="checkTime(hours.value ,minutes.value , seconds.value)">
+    </form>
+  </div>
+</div>
