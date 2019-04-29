@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import {FormGroup,FormControl,Validators,FormArray} from '@angular/forms'
+import {FormGroup,FormControl} from '@angular/forms'
 
 @Component({
   selector: 'my-app',
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
 
   checkTime(Hours , Minutes , Seconds) {
-    console.log(Hours , + " " + Minutes )
+
     let newSecondsValue = Seconds % 60;
     let totalMinutes = Number(Minutes) + ((Seconds - (Seconds % 60)) / 60);
     let newMinutesValue = totalMinutes % 60;
